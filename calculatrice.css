@@ -1,0 +1,99 @@
+/*Fichier CSS de la calculatrice*/
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    font-size: 30px;
+    color: #04BBFF;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calcGround{
+    margin-left: auto;
+    margin-right: auto;
+    width:400px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.calcGround .calcScreen{
+    background-color: blue;
+    width: 400px;
+    height:100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    color: grey;
+    font-size: 30px;
+    text-align: right;
+    border: none;
+}
+
+
+.calcGround .calcButtons{
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.calcGround .calcButtons .calcButton{
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton[id="zero"]{
+    width: 200px;
+    height: 100px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton[id="clear"]{
+    width: 200px;
+    height: 100px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton[id="back"]{
+    width: 200px;
+    height: 100px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton:hover{
+    background-color: #e6e6e6;
+}
+
+.calcGround .calcButtons .calcButton:active{
+    background-color: #cccccc;
+}
