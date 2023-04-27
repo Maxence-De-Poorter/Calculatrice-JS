@@ -1,11 +1,22 @@
 class Calculator {
+  constructor() {
+    var firstCharacter;
+    var equalDate;
+  }
+
   set(nb) {
+    if(!document.getElementById('calcScreenEqual').value) {
+      document.getElementById('calcScreenResult').value = "";
+
+      this.firstCharacter=new Date();
+    }
     const calcScreenEqual = document.getElementById('calcScreenEqual');
     const calcScreenResult = document.getElementById('calcScreenResult');
     calcScreenEqual.value += nb;
   }
 
   equal() {
+    this.equalDate = new Date();
     const expression = document.getElementById('calcScreenEqual').value;
     const isCalculable = /^[\d+\-*/().\s]+$/.test(expression); // Vérifie si l'expression contient uniquement des caractères autorisés
 
@@ -13,8 +24,11 @@ class Calculator {
       try {
         const result = eval(expression);
         document.getElementById('calcScreenResult').value = result;
+        document.getElementById('calcScreenEqual').value = '';
+        console.log(this.equalDate-this.firstCharacter, "millisecondes");
       } catch (error) {
         document.getElementById('calcScreenResult').value = 'Erreur';
+        document.getElementById('calcScreenEqual').value = '';
       }
     } else {
       document.getElementById('calcScreenResult').value = 'Erreur';
