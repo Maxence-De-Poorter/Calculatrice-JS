@@ -15,7 +15,6 @@ import { Invalide } from './invalide.entity';
       database: 'calculatrice',
       entities: [Invalide],
       synchronize: false,
-      dropSchema: true,
     }), TypeOrmModule.forFeature([Invalide]),
   ],
   

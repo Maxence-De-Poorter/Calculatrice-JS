@@ -3,7 +3,7 @@ import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 @Entity()
 export class Valide {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn({})
     id: number;
 
     @Column()

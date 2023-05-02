@@ -15,8 +15,9 @@ export class ValideController {
     }
 
     @Get()
-    getAllValid(): Promise<Valide[]> {
-        return this.valideService.getAllValid();
+    getMoyenne(): Promise<number> {
+        return this.valideService.getMoyenne();
     }
 
 }
+  

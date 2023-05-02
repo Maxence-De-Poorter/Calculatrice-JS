@@ -18,7 +18,32 @@ export class ValideService {
         return this.valideRepository.save(valid);
     }
 
-    getAllValid(): Promise<Valide[]> {
-        return this.valideRepository.find();
+    getMoyenne(): Promise<any> {
+        //Récupérer toutes les valeurs de la table valide
+        return this.valideRepository.find().then((valide) => {
+            //Calculer la moyenne et le pourcentage de calcul plus rapide que le dernier calcul
+            let sum = 0;
+            valide.forEach((element) => {
+                sum += element.timeTakenMs;
+            });
+            let moyenne = sum/valide.length;
+
+            let count=0;
+            valide.forEach((element) => {
+                if(element.timeTakenMs < valide[valide.length-1].timeTakenMs){
+                    count++;
+                }
+            });
+            let pourcentage = count/valide.length;
+
+            //Créer un objet avec les valeurs calculées
+            let result = {
+                "moyenne": moyenne,
+                "pourcentage": pourcentage
+            }
+
+            //Retourner l'objet
+            return result;
+        });
     }
 }

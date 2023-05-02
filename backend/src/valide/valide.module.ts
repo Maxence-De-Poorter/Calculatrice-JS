@@ -15,10 +15,10 @@ import { Valide } from './valide.entity';
       database: 'Calculatrice',
       entities: ["dist/**/*.entity{.ts,.js}"],
       synchronize: false,
-      dropSchema: true,
     }), TypeOrmModule.forFeature([Valide]),
   ],
   controllers: [ValideController],
   providers: [ValideService]
 })
 export class ValideModule {}
+  

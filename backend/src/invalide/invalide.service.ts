@@ -16,8 +16,15 @@ export class InvalideService {
         return this.invalideRepository.save(invalide);
     }
 
-    getAllInvalide(): Promise<Invalide[]> {
-        return this.invalideRepository.find();
+    getAllInvalide(): Promise<any> {
+        return this.invalideRepository.find().then((invalide) => {
+            
+            let result = {
+                "nombre": invalide.length,
+                "date de la dernière invalidation": invalide[invalide.length-1].created_at
+            }
+            return result;
+        });
     }
 
 }
