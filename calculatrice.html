@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculatrice.css">
+    <script src="calculatrice.js"></script>
+    <title>Calculatrice JS</title>
+</head>
+<body>
+    <h1 class="title">Calculatrice</h1>
+    <div class="calcGround">
+        <div class="calcScreen">
+            <input type="text" id="calcScreenEqual" disabled>
+            <input type="text" id="calcScreenResult" disabled>
+        </div>
+        <div class="calcButtons">
+            <button class="calcButton" id="clear" onclick="calc.clr()">C</button>
+            <button class="calcButton" id="back" onclick="calc.del()">⌫</button>
+            <button class="calcButton" onclick="calc.set('(')">(</button>
+            <button class="calcButton" onclick="calc.set(')')">)</button>
+            <button class="calcButton" onclick="calc.set('%')">%</button>
+            <button class="calcButton" onclick="calc.set('/')">÷</button>
+            <button class="calcButton" onclick="calc.set('7')">7</button>
+            <button class="calcButton" onclick="calc.set('8')">8</button>    
+            <button class="calcButton" onclick="calc.set('9')">9</button>
+            <button class="calcButton" onclick="calc.set('*')">x</button>
+            <button class="calcButton" onclick="calc.set('4')">4</button>
+            <button class="calcButton" onclick="calc.set('5')">5</button>
+            <button class="calcButton" onclick="calc.set('6')">6</button>
+            <button class="calcButton" onclick="calc.set('-')">-</button>
+            <button class="calcButton" onclick="calc.set('1')">1</button>
+            <button class="calcButton" onclick="calc.set('2')">2</button>
+            <button class="calcButton" onclick="calc.set('3')">3</button>
+            <button class="calcButton" onclick="calc.set('+')">+</button>
+            <button class="calcButton" id="zero" onclick="calc.set('0')">0</button>
+            <button class="calcButton" onclick="calc.set('.')">.</button>
+            <button class="calcButton" id="equal" onclick="calc.equal()">=</button>
+        </div>
+    </div>
+</body>
+</html>

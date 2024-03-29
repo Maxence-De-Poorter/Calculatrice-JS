@@ -1,0 +1,162 @@
+/*Fichier CSS de la calculatrice*/
+*{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+}
+.title{
+    font-size: 30px;
+    color: #04BBFF;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calcGround{
+    margin-left: auto;
+    margin-right: auto;
+    width:300px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.calcGround .calcScreen{
+    width: 300px;
+    height:100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input{
+    width: 296px;
+    height: 50px;
+    background-color: white;
+    color: grey;
+    font-size: 30px;
+    text-align: right;
+    border: none;
+}
+
+input[id="calcScreenResult"]{
+    color:black;
+}
+
+.calcGround .calcButtons{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calcGround .calcButtons .calcButton{
+    width: 75px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: grey;
+
+}
+
+.calcGround .calcButtons .calcButton[id="zero"]{
+    width: 150px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton[id="clear"]{
+    width: 150px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton[id="back"]{
+    width: 150px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calcGround .calcButtons .calcButton[id="equal"]{
+    width: 75px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: green;;
+}
+
+.calcGround .calcButtons .calcButton[id="clear"]{
+    width: 150px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: red;
+}
+
+.calcGround .calcButtons .calcButton[id="back"]{
+    width: 150px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: yellow;
+}
+
+.calcGround .calcButtons .calcButton:hover{
+    background-color: #e6e6e6;
+}
+
+.calcGround .calcButtons .calcButton:active{
+    background-color: #cccccc;
+}
+
+.calcGround .calcButtons .calcButton:hover[id="equal"]{
+    background-color: rgb(0, 255, 0);
+}
+
+.calcGround .calcButtons .calcButton:active[id="equal"]{
+    background-color: rgb(0, 230, 0);
+}
+
+.calcGround .calcButtons .calcButton:hover[id="clear"]{
+    background-color: rgb(255, 0, 0);
+}
+
+.calcGround .calcButtons .calcButton:active[id="clear"]{
+    background-color: rgb(230, 0, 0);
+}
+
+.calcGround .calcButtons .calcButton:hover[id="back"]{
+    background-color: yellow;
+}
+
+.calcGround .calcButtons .calcButton:active[id="back"]{
+    background-color: rgb(255, 217, 0);
+}
